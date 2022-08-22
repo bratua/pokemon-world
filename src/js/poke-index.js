@@ -57,6 +57,7 @@ function renderPokemon(pokemon) {
 }
 
 function createPokemon(id) {
+  fetchPokemonById(id).then(pokemonMarkUp);
   return fetchPokemonById(id).then(renderPokemon);
 }
 
