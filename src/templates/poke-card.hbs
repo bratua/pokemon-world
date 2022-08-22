@@ -1,0 +1,30 @@
+<li class='poke-item'>
+  <div class='card'>
+    <div class='poke-img'>
+      <img src='{{sprites.front_default}}' alt='{{name}}' />
+    </div>
+    <div class='poke-info'>
+      <h2 class='card-title'>Имя: {{name}} (id: {{id}}) </h2>
+      <p class='height'>Рост: {{height}}</p>
+      <p class='weight'>Вес: {{weight}}</p>
+      <p class='moves'><b>Характеристики:</b></p>
+      <ul class='stats'>
+        {{#each stats}}
+          <li class='stats-item'>{{stat.name}} = {{base_stat}}</li>
+        {{/each}}
+      </ul>
+      <p class='skills-header'><b>Умения:</b></p>
+      <ul class='skills-list'>
+        {{#each abilities}}
+          <li class='skills'>{{ability.name}}</li>
+        {{/each}}
+      </ul>
+      <p class='items-header'><b>Предметы:</b></p>
+      <ul class='items-list'>
+        {{#each held_items}}
+          <li class='skills'>{{item.name}}</li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</li>
